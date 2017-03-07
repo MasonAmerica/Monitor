@@ -1,0 +1,51 @@
+os:
+  name: iheartlives-monitor
+  version: 5
+  configurations:
+    android:
+      config_sms_capable: false
+    mason-fota:
+      config_allow_download_over_metered: true
+      config_show_download_in_downloads_ui: true
+      config_show_download_progress_as_notification: true
+    mason-management:
+      #direct_boot_package: "com.iheartlives.monitor"
+      disable_keyguard: true
+      disable_status_bar: false
+      disable_camera: false
+      disable_screen_capture: false
+    mason-app-updater:
+      config_allow_download_over_metered: true
+      config_show_download_in_downloads_ui: true
+      config_show_download_progress_as_notification: true
+    settings:
+      config_default_tile_list:
+        - "wifi"
+        - "bluetooth"
+        - "sim"
+        - "about"
+        - "developer"
+        - "datausage"
+        - "more"
+        - "buttons"
+        - "home"
+        - "display"
+        - "sounds"
+        - "apps"
+        - "storage"
+        - "battery"
+        - "memory"
+        - "users"
+        - "location"
+        - "security"
+        - "accounts"
+        - "language"
+        - "backup"
+        - "datetime"
+        - "accessibility"
+        - "printing"
+
+apps:
+  - name: com.iheartlives.monitor
+    package_name: com.iheartlives.monitor
+    version_code: 6
