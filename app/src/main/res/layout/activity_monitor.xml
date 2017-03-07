@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_level"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.iheartlives.monitor.tasks.MonitorActivity">
+
+    <TextView
+        android:id="@+id/patient_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/patient_name"
+        android:layout_alignParentStart="true"
+        android:text="Patient Name:"
+        tools:text="Patient Name:" />
+
+    <TextView
+        android:id="@+id/dob_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/patient_name_label"
+        android:text="DOB:"
+        tools:text="DOB:" />
+
+    <TextView
+        android:id="@+id/sex_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dob_label"
+        android:text="Sex:"
+        tools:text="Sex:" />
+
+    <TextView
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dob"
+        android:layout_alignStart="@+id/dob"
+        android:layout_below="@+id/dob"
+        android:text="M"
+        tools:text="M" />
+
+    <TextView
+        android:id="@+id/patient_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/bmp_indicator"
+        android:text="John Doe"
+        tools:text="John Doe" />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/patient_name"
+        android:layout_alignStart="@+id/patient_name"
+        android:layout_below="@+id/patient_name"
+        android:text="1/1/1971"
+        tools:text="1/1/1971" />
+
+    <TextView
+        android:id="@+id/bmp_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="146dp"
+        android:text="68"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="100sp"
+        tools:text="68" />
+
+    <TextView
+        android:id="@+id/bpm_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bmp_indicator"
+        android:layout_centerHorizontal="true"
+        android:text="Beats Per Minute" />
+
+    <TextView
+        android:id="@+id/bpm_average_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bpm_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:text="Average: 70"
+        android:textSize="36sp"
+        tools:text="Average: 70" />
+
+    <Button
+        android:id="@+id/button_upload"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_clear"
+        android:layout_alignParentEnd="true"
+        android:onClick="toggleUpload"
+        android:text="@string/start_upload" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/version_label"
+        android:layout_alignParentEnd="true"
+        android:onClick="clear"
+        android:text="@string/button_reset" />
+
+    <TextView
+        android:id="@+id/version_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="version x" />
+
+    <TextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/idle" />
+
+</RelativeLayout>

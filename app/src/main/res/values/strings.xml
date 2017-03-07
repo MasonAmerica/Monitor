@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Monitor</string>
+    <string name="edit_message">Enter patient information</string>
+    <string name="button_send">Submit</string>
+    <string name="button_reset">Clear</string>
+    <string name="idle">Idle.</string>
+    <string name="start_upload">Start Upload</string>
+    <string name="stop_upload">Stop Upload</string>
+</resources>

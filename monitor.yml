@@ -1,0 +1,25 @@
+os:
+  name: iheartlives-monitor
+  version: 1
+  configurations:
+    android:
+      config_sms_capable: false
+    mason-management:
+      direct_boot_package: "com.iheartlives.monitor"
+      disable_keyguard: true
+      disable_status_bar: false
+      disable_camera: true
+      disable_screen_capture: true
+    mason-fota:
+      config_allow_download_over_metered: true
+      config_show_download_in_downloads_ui: true
+      config_show_download_progress_as_notification: true
+    mason-app-updater:
+      config_allow_download_over_metered: true
+      config_show_download_in_downloads_ui: true
+      config_show_download_progress_as_notification: true
+
+apps:
+  - name: com.iheartlives.monitor
+    package_name: com.iheartlives.monitor
+    version_code: 1
