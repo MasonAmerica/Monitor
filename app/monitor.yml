@@ -14,20 +14,20 @@ os:
       disable_status_bar: false
       disable_camera: false
       disable_screen_capture: false
-        hidden_packages:
-          # - "com.android.launcher3"
-          - "com.android.gallery"
-          - "com.android.camera"
-          - "com.android.browser"
-          - "com.android.dialer"
-          - "com.android.phone"
-          - "com.android.soundrecorder"
-          - "com.android.calendar"
-          - "com.android.calculator2"
-          - "com.android.email"
-          - "com.android.music"
-          - "com.android.mms"
-          - "com.android.qrdfileexplorer"
+      hidden_packages:
+        # - "com.android.launcher3"
+        - "com.android.gallery"
+        - "com.android.camera"
+        - "com.android.browser"
+        - "com.android.dialer"
+        - "com.android.phone"
+        - "com.android.soundrecorder"
+        - "com.android.calendar"
+        - "com.android.calculator2"
+        - "com.android.email"
+        - "com.android.music"
+        - "com.android.mms"
+        - "com.android.qrdfileexplorer"
     mason-app-updater:
       config_allow_download_over_metered: true
       config_show_download_in_downloads_ui: true
