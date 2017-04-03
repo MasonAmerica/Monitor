@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.iheartlives.monitor.AUTH";
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        ((TextView) findViewById(R.id.label_about)).setText(
+                String.format("Running on a %s %s", Build.MANUFACTURER, Build.MODEL));
     }
 
     @Override
