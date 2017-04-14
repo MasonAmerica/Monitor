@@ -1,10 +1,8 @@
-package com.iheartlives.monitor;
+package com.iheartlives.monitor.tasks;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -13,8 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.iheartlives.monitor.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     public final static String EXTRA_MESSAGE = "com.iheartlives.monitor.AUTH";
     private boolean mKioskMode = false;
 
@@ -87,5 +87,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "This is the main screen.", Toast.LENGTH_SHORT).show();
+    }
 }

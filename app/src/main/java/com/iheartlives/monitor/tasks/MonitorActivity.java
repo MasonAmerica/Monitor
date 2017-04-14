@@ -1,22 +1,19 @@
-package com.iheartlives.monitor;
+package com.iheartlives.monitor.tasks;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+import com.iheartlives.monitor.Patient;
+import com.iheartlives.monitor.R;
 
 import java.util.HashMap;
 import java.util.Random;
 
-public class MonitorActivity extends AppCompatActivity {
+public class MonitorActivity extends BaseActivity {
     public final static String EXTRA_MESSAGE = "com.iheartlives.monitor.START";
 
     @Override
@@ -25,6 +22,8 @@ public class MonitorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_monitor);
 
         HashMap<String, Patient> patients = createPatients();
+
+        mHasOptionsMenu = false;
 
         // BARCODE SCAN STUFF
         Intent intent = getIntent();
@@ -110,6 +109,10 @@ public class MonitorActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra(EXTRA_MESSAGE, "RESET");
         startActivity(intent);
+    }
+
+    public void toggleUpload(View view) {
+
     }
 
     // START FOTA
